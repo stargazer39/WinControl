@@ -20,7 +20,7 @@ namespace powercgf {
     }
 
     void SetMaxPowerSavingPlan(Status* status) {
-        DWORD res = PowerSetActiveScheme(NULL, &GUID_MIN_POWER_SAVINGS);
+        DWORD res = PowerSetActiveScheme(NULL, &GUID_MAX_POWER_SAVINGS);
 
         status->success = (res == ERROR_SUCCESS);
         status->dword = res;
